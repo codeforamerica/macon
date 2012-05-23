@@ -18,8 +18,13 @@ body{
     }
 }
 
+.row{
+    padding: 50px 0 25px;
+}
+
 h1{
     font-size: 90px;
+    line-height: .5em;
     position: relative;
     small{
         color: #777;
@@ -27,6 +32,13 @@ h1{
         font-weight: 300;
         padding-left: 24px;
     }
+}
+
+.flag{
+    bottom: 9px;
+    position: absolute;
+    right: 0;
+    width: 75px;
 }
 
 h2{
@@ -38,17 +50,6 @@ h2{
         font-weight: 300;
         padding-left: 16px;
     }
-}
-
-.row{
-    padding: 50px 0 25px;
-}
-
-.flag{
-    margin-bottom: 20px;
-    position: absolute;
-    right: 0;
-    width: 75px;
 }
 
 .focus{
@@ -85,6 +86,13 @@ h2{
  * Tablet
  */
 @media (max-width: 979px) and (min-width: 768px) {
+    h1{
+        font-size: 76px;
+        small{
+            font-size: 28px;
+            padding-left: 16px;
+        }
+    }
 }
 
 
