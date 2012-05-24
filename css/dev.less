@@ -1,19 +1,29 @@
 @import "less/mixins.less";
 
+.background-image(@one, @two, @three){
+  background-image: -webkit-linear-gradient(left, @one, @two, @three);
+  background-image:    -moz-linear-gradient(left, @one, @two, @three);
+  background-image:     -ms-linear-gradient(left, @one, @two, @three);
+  background-image:      -o-linear-gradient(left, @one, @two, @three);
+}
+
+hr{
+  border: 0;
+  height: 1px;
+  width: 100%;
+  &.soften{
+      .background-image(rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+  }
+  &.left{
+      .background-image(rgba(0, 0, 0, .1), rgba(0, 0, 0, .05), rgba(0, 0, 0, 0));
+  }
+}
+
 body{
     background-attachment: fixed;
     font-family: "Yanone Kaffeesatz", "Helvetica Neue", sans-serif;
     padding: 25px 0;
     text-shadow: 1px 1px 1px #fff;
-    hr.soften{
-      border: 0;
-      height: 1px;
-      width: 100%;
-      background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-      background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-      background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-      background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-    }
     p{
         font: 300 20px/1.1em "Yanone Kaffeesatz", "Helvetica Neue", sans-serif;
         padding: 0;
@@ -27,7 +37,6 @@ body{
 h1{
     font-size: 90px;
     line-height: .5em;
-    text-align: center;
     small{
         color: #777;
         font-size: 32px;
