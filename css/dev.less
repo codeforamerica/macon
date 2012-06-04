@@ -25,9 +25,10 @@ body{
     background: #fdfdfc;
     font-family: "Yanone Kaffeesatz", "Helvetica Neue", sans-serif;
     padding: 25px 0;
-    text-shadow: 1px 1px 1px #fff;
+    text-shadow: 1px 1px 0 #fff;
     h1, h2, h3, h4, h5, h6{
         color: #353232;
+        text-shadow: 2px 2px 0 #fff;
     }
     p{
         font: 300 20px/1.1em "Yanone Kaffeesatz", "Helvetica Neue", sans-serif;
@@ -81,16 +82,12 @@ h2{
 }
 
 
-/*
- * Phone
- */
-@media (max-width: 767px) {
+/* Phone */
+@media (max-width: 480px) {
 }
 
 
-/*
- * Tablet
- */
+/* Tablet */
 @media (max-width: 979px) and (min-width: 768px) {
     h1{
         font-size: 76px;
@@ -103,11 +100,12 @@ h2{
 
 
 
-/*
- * Desktop
- */
+/* Desktop */
 @media (min-width: 1200px) {
     body p{
         font-size: 24px;
+    }
+    h1{
+        font-size: 108px;
     }
 }
